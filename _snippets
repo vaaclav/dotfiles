@@ -1,0 +1,12 @@
+# Global snippets
+# .vim/bundle/vim-snippets/snippets
+snippet u
+	`nr2char(96)`${0}`nr2char(96)`
+snippet uu
+	"${0}"
+snippet code
+	{{{ class="brush: ${1:css}; toolbar:false; ${2:highlight:[1,10]} "
+	${0}
+	}}}
+snippet obrazek
+	{{img/.png|obrázek - }}
