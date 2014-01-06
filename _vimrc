@@ -54,7 +54,7 @@ Bundle 'vim-scripts/Cleanroom'
 "Bundle "altercation/solarized"
 Bundle "altercation/vim-colors-solarized"
 Bundle "vim-scripts/vimwiki"
-Bundle "mjbrownie/browser.vim"
+"Bundle "mjbrownie/browser.vim"
 Bundle "tpope/vim-vividchalk"
 Bundle "tpope/vim-surround"
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -62,7 +62,7 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 "Bundle "MarcWeber/Ultisnips"
 Bundle "honza/vim-snippets"
-Bundle "vim-scripts/wc.vim--jcline"
+"Bundle "vim-scripts/wc.vim--jcline"
 
 filetype plugin indent on
 set history=10000
@@ -187,9 +187,11 @@ nnoremap <C-n> :call NumberToggle()<cr>
 "vimwiki
 let g:vimwiki_list = [{'path': 'D:/vimwiki/', 'ext': '.txt', 'path_html': 'D:/vimwiki/html/', 'template_path': 'D:/vimwiki/html/templates/', 'template_default': 'default', 'template_ext': '.html'}, {'path': '~/vimwiki2/', 'ext': '.txt'}]
 
-set guifont=Consolas:h10
+if has('gui_running')
+  set guifont=Inconsolata\ Medium\ 12
+endif
 
-set lines=40 columns=100
+"set lines=40 columns=100
 set background=dark
 colorscheme solarized
 
@@ -208,4 +210,3 @@ nnoremap ^ g^
 set wrap linebreak textwidth=0
 let g:vimwiki_table_mappings = 0
 
-cd D:\Work
